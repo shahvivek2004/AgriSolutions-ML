@@ -1,0 +1,84 @@
+.app {
+  font-family: 'Arial, sans-serif';
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.btn{
+  border:1px solid #4CAF50;
+  border-radius: 20px;;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #4CAF50;
+}
+
+h2{
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4CAF50;
+}
+
+.infoSection {
+  padding: 20px;
+  background: linear-gradient(135deg, #e8f5e9, #f4f4f9);
+}
+
+.title {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.cropsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.cropCard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.cropCard:hover {
+  transform: scale(1.05);
+}
+
+.cropName {
+  font-weight: 700;
+  margin-top: 0;
+  color: #4CAF50;
+}
+
+.icon {
+  vertical-align: middle;
+  margin-right: 5px;
+  color: #1cbf16;
+  background-color: #1cbf16;
+}
+
+.graphSection {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.graphTitle {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#4CAF50;
+}

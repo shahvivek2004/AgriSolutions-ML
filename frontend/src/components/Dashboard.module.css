@@ -1,0 +1,73 @@
+.bg{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  background-image: url('C:\Users\Dell\OneDrive\Desktop\Placement\Minor_Project\final_code\frontend\src\assets\cdbg.jpg');  /* Add your image path here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9;
+  position:absolute;
+  width: 1570px;
+  margin: auto;
+  height: 1250px;
+  margin-left:-67px;
+}
+
+.dashboardCard {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e31eae;
+    border: 10px solid  #bd00fb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .chartCard {
+    padding: 1rem;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chartCard:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .chartCard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+  
+  .chartCard .recharts-tooltip-wrapper {
+    z-index: 10;
+  }
+  
+  .chartCard .recharts-legend-item {
+    font-size: 0.85rem;
+  }
+
+  .tick{
+    font-weight:700;
+  }
+  
+  .rao{
+    font-weight:700;
+  }

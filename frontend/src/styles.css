@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
-<<<<<<< HEAD
-  
-=======
->>>>>>> origin/main
+/*   
+  Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+
   html {
     font-family: "Montserrat", sans-serif;
   }
@@ -16,7 +16,6 @@
     padding: 0 16px;
   }
   
-<<<<<<< HEAD
   /* header {
     background-color: #f5ba13;
     margin: auto -16px;
@@ -42,33 +41,27 @@
     box-shadow: 0 2px 5px #646464;
   } */
 
-=======
->>>>>>> origin/main
   header {
-    background-color: #f5ba13;
+    background-color: #42b20e;
     margin: auto -16px;
     padding: 16px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-=======
->>>>>>> origin/main
   }
   
   header h1 {
     color: #fff;
     font-family: "McLaren", cursive;
     font-weight: 200;
-<<<<<<< HEAD
     display: flex;
     align-items: center;
   }
   
   header button {
-    background-color: #f5ba13;
+    background-color: #52cd19;
     width: 100px;
     height: 36px;
     color: white;
@@ -92,10 +85,6 @@
   }
   
 
-=======
-  }
-  
->>>>>>> origin/main
   footer {
     position: absolute;
     text-align: center;
@@ -131,7 +120,7 @@
     position: relative;
     float: right;
     margin-right: 10px;
-    color: #f5ba13;
+    color: #52cd19;
     border: none;
     width: 36px;
     height: 36px;
@@ -158,15 +147,12 @@
     font-family: inherit;
     resize: none;
   }
-<<<<<<< HEAD
   
-=======
->>>>>>> origin/main
   form.create-note button {
     position: absolute;
     right: 18px;
     bottom: -18px;
-    background: #f5ba13;
+    background: #52cd19;
     color: #fff;
     border: none;
     border-radius: 50%;

@@ -1,8 +1,7 @@
 import React from "react";
 import HighlightIcon from "@mui/icons-material/Highlight";
-<<<<<<< HEAD
 import axios from "axios";
-
+import "./Header.css";
 const API_URL = "http://localhost:4000";
 
 const handleLogout = async () => {
@@ -15,20 +14,16 @@ const handleLogout = async () => {
   }
 };
 
-=======
->>>>>>> origin/main
 
-function Header() {
+function Header(props) {
   return (
     <header>
       <h1>
         <HighlightIcon />
-        Keeper
+        Agrotech
       </h1>
-<<<<<<< HEAD
+      <p className="headerp1">{props.uname}</p>
       <button onClick={handleLogout}>Log Out</button>
-=======
->>>>>>> origin/main
     </header>
   );
 }

@@ -9,10 +9,15 @@ import session from "express-session";
 import env from "dotenv";
 import cors from 'cors';
 import flash from "connect-flash";
+import axios from "axios";
+import moment from "moment";
+import { stringify } from "querystring";
 
 const app = express();
 const saltRounds = 10;
 env.config();
+
+const d =new Date().getDate();
 
 app.use(
     session({
@@ -20,11 +25,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         cookie: {
-<<<<<<< HEAD
             maxAge: 1000 * 60 * 5, // 5 minute
-=======
-            maxAge: 1000 * 60 * 1, // 1 minute
->>>>>>> origin/main
             secure: process.env.NODE_ENV === "production", // Ensure cookies are sent over HTTPS
             httpOnly: true,
         }
@@ -35,6 +36,8 @@ app.use(cors({
     origin: process.env.CLIENT_LINK,
     credentials: true,
 }));
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(flash());
@@ -212,7 +215,6 @@ app.post("/register", async (req, res) => {
     }
 });
 
-<<<<<<< HEAD
 //=====================================================Auth Module Completed Here=======================================//
 
 app.get("/get/:id",async(req,res)=>{
@@ -250,10 +252,35 @@ app.delete("/delete/:id",async(req,res)=>{
 });
 
 //========================================================CRUD module completed====================================================//
-=======
-//===============================================================================Auth Module======================================================//
 
->>>>>>> origin/main
+
+
+const apiKey = "579b464db66ec23bdd0000016fca6c37ed8b4a407b0bd9de67848d6c";
+const resourceUUID = '35985678-0d79-46b4-9ed6-6f13308a1d24';
+const apiUrl = `https://api.data.gov.in/resource/${resourceUUID}`;
+
+app.get('/api/data/', async (req, res) => {
+    try {
+      // Step 2: Make the request to the external API and apply filter by date (if possible)
+      const params = {
+        'api-key': apiKey,
+        format: 'json',
+        limit: 1000,  // Fetch more results, if needed
+        filters: { Arrival_Date: '07/10/2024', State:'Gujarat'}, // Filter for yesterday's date
+      };
+  
+      const response = await axios.get(apiUrl, { params });
+      const mainDistricts = ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar"];
+      const filteredData = response.data.records.filter(record => 
+      mainDistricts.includes(record.District));
+     // console.log(filteredData);
+      res.json(filteredData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).json({ error: 'Error fetching data' });
+    }
+  });
+
 
 // Start the server
 app.listen(process.env.SERVER_PORT, () => {
